@@ -119,6 +119,42 @@ FFFFFF навигация ;*/
   margin-left: 50px;
 }
 
+.nav-mail,
+.nav-tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-mail,
+.icon-smartphone {
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.icon-mail:hover,
+.icon-smartphone:hover {
+  fill: var(--accent-color);
+}
+/* .nav-tel::before {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+ width: 10px;
+  height: 16px;
+  background-color: tomato;
+
+  /background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nav-tel::before {
+  background-image: url(../images/smartphone.svg);
+  width: 10px;
+  height: 16px;
+}  */
+
 .nav-link {
   display: block;
   padding-top: 32px;
@@ -154,9 +190,20 @@ FFFFFF навигация ;*/
 /* секция герой */
 
 .hero {
+  max-width: 1600px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/hero_bg.jpg);
+  background-repeat: no-repeat;
 }
 
 .hero-titel {
@@ -224,9 +271,26 @@ FFFFFF навигация ;*/
   margin-right: 30px;
 }
 
+.peculiarities-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  /* background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center; */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .peculiarities-item:nth-child(4n) {
   margin-right: 0px;
 }
+
+.pecu-icon {
+  display: inline;
+}
+
 /* .peculiarities-item. .items + .items {
   margin-right: 0px;
 } */
@@ -305,6 +369,7 @@ img {
 
 .team-item {
   margin-right: 30px;
+  background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -344,6 +409,46 @@ img {
 
 .team-photo {
   display: block;
+}
+
+.icon-team {
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team-icons {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.team-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+.taem-link-icon {
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+}
+
+.taem-link-icon:hover {
+  background-color: var(--accent-color);
+}
+
+.svg-icon {
+  fill: #afb1b8;
+}
+
+.svg-icon:hover {
+  fill: var(--primary-white-color);
 }
 
 /* заголовки h2 */
@@ -433,9 +538,9 @@ img {
 }
 
 .project-list {
-  flex-basis: calc(100% / 3 - 30px);  
-  margin-left: 30px; 
-   margin-bottom: 30px;}
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .portfolio-image {
@@ -471,10 +576,19 @@ img {
 }
 
 /* футер для двух страниц */
+.footer-container {
+  display: flex;
+}
+
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.addres {
+  margin-right: 70px;
+}
+
 .footer-address {
   margin-top: 20px;
   font-style: normal;
@@ -506,13 +620,43 @@ footer {
   color: var(--accent-color);
 }
 
-.container-footer {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+.footer-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.connection {
+  align-items: center;
+}
+.social {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links {
+  display: inline-block;
+  content: "";
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 10%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.social-links:hover {
+  background-color: var(--accent-color);
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
