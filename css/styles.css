@@ -255,19 +255,20 @@ FFFFFF навигация ;*/
   margin-right: 30px;
 }
 
-.peculiarities-item::before {
-  display: block;
-  content: "";
+.pecu-icon {
+  width: 270px;
   height: 120px;
-  margin-bottom: 30px;
   background-color: #f5f4fa;
-  /* background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center; */
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.peculiarities-item:nth-child(4n) {
+.peculiarities-item:last-child {
   margin-right: 0px;
 }
 
@@ -428,9 +429,76 @@ img {
   fill: #afb1b8;
 }
 
+/* постоянные клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-titel {
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.clients-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  margin-right: 30px;
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+.clients-item:last-child {
+  margin-right: 0;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+
+  color: currentColor;
+  cursor: pointer;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
 /* заголовки h2 */
 .disc-titel,
-.team-titel {
+.team-titel,
+.clients-titel {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -439,7 +507,8 @@ img {
 .team-titel,
 .team-name,
 .heading-title,
-.disc-titel {
+.disc-titel,
+.clients-titel {
   color: var(--titel-text-color);
 }
 
@@ -603,9 +672,6 @@ footer {
   justify-content: center;
 }
 
-.connection {
-  align-items: center;
-}
 .social {
   font-weight: 700;
   font-size: 14px;
@@ -638,14 +704,19 @@ footer {
   background-position: center;
 }
 
+.social-links:last-child {
+  margin-right: 0;
+}
+
+.social-links:hover,
+.social-links:focus {
+  background-color: var(--accent-color);
+}
+
 .footer-link-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.social-links:hover,
-.social-links:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-icon {
